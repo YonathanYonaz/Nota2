@@ -8,6 +8,13 @@ function formatTanggal() {
     return `${hari} ${bulan}`;
 }
 
+function formatJam() {
+    const tgl = new Date();
+    const jam = tgl.getHours().toString().padStart(2, '0');
+    const menit = tgl.getMinutes().toString().padStart(2, '0');
+    return `${jam}.${menit} WIB`;
+}
+
 function addItem() {
     const n = document.getElementById('itemName').value;
     const q = parseInt(document.getElementById('itemQty').value);
@@ -39,6 +46,7 @@ function render() {
 
 function printStruk() {
     document.getElementById('tanggal').innerText = formatTanggal();
+    document.getElementById('jam').innerText = formatJam();
     window.print();
 }
 
@@ -49,6 +57,17 @@ function resetStruk() {
     document.getElementById('customerName').value = '';
     document.getElementById('namaPelangganStruk').innerText = '';
     document.getElementById('tanggal').innerText = '';
+    document.getElementById('jam').innerText = '';
 }
+
+function undoItem() {
+    if (items.length > 0) {
+        items.pop();
+        render(); 
+    } else {
+        alert("Tidak ada item untuk dihapus!");
+    }
+}
+
 
 document.getElementById('tanggal').innerText = formatTanggal();

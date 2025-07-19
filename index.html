@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=320, initial-scale=1.0">
+  <title>Denny Snack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Denny Snack</h2>
+  <p id="tanggal"></p>
+  <p id="namaPelangganStruk"></p>
+  <hr>
+  <table>
+    <thead><tr><td>Item</td><td>Qty</td><td>Total</td></tr></thead>
+    <tbody id="itemList"></tbody>
+  </table>
+  <hr>
+  <p class="total">TOTAL: Rp <span id="grandTotal">0</span></p>
+  <hr>
+  <h4>Terima Kasih!</h4>
+
+  <!-- Form input -->
+  <div>
+    <input type="text" id="customerName" placeholder="Nama Pelanggan" />
+    <input type="text" id="itemName" placeholder="Nama Barang" />
+    <input type="number" id="itemQty" placeholder="Qty" />
+    <input type="number" id="itemPrice" placeholder="Harga" />
+    <button onclick="addItem()">Tambah Item</button>
+    <button onclick="printStruk()">Cetak Struk</button>
+    <button onclick="resetStruk()">Reset</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

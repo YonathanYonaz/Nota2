@@ -7,12 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Denny Snack</h1>
-  <br>
-  <p id="tanggal"></p>
-  <br>
-  <p id="namaPelangganStruk"></p>
-  <br>  
+  <h1>Denny Snack</h1><br>
+  <p id="tanggal"></p><br>
+  <p id="jam"></p><br>
+  <p id="namaPelangganStruk"></p><br>  
   <hr>
   <table>
     <thead><tr><td>Item</td><td>Qty</td><td>Total</td></tr></thead>
@@ -32,6 +30,7 @@
     <button onclick="addItem()">Tambah Item</button>
     <button onclick="printStruk()">Cetak Struk</button>
     <button onclick="resetStruk()">Reset</button>
+    <button onclick="undoItem()">Undo</button>
   </div>
   <script src="script.js"></script>
 </body>

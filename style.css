@@ -1,5 +1,5 @@
 body { font-family: monospace; margin: 50px; }
-h2, p { text-align: center; margin: 0; }
+h1, p { text-align: center; margin: 0; }
 table { width:100%; margin:10px 0; border-collapse: collapse; }
 td { font-size:12px; padding:2px 0; }
 .total { border-top:1px dashed; font-weight:bold; margin:5px 0; }
